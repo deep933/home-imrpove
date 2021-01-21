@@ -1,0 +1,27 @@
+.project-card{
+    border:0.15rem solid #EEE;
+    border-radius: 0.6rem;
+    box-sizing: border-box;
+    background-color: #FFF;
+    margin:0.5rem 0;
+    padding: 0.5rem 0;
+}
+
+.project-card h1{
+    font-size: 1.5rem;
+}
+.project-card .card-header{
+    padding: 0.4rem 1rem;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+}
+
+.project-card .card-content{
+    padding: 0.4rem 1rem;
+}
+
+
+.project-card .card-content p{
+    padding: 1rem 0;
+}

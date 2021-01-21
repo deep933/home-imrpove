@@ -1,13 +1,163 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/hk-grotesk.min.css");
+.flex-row, button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "HK Grotesk", sans-serif;
+  background-color: #fafafa;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+button,
+input {
+  font-family: "HK Grotesk", sans-serif;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+button {
+  padding: 1rem 1.5rem;
+  background-color: #168aff;
+  border: 0.1rem solid #2e66d1;
+  -webkit-box-shadow: 0px 0.1rem 0.1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0.1rem 0.1rem rgba(0, 0, 0, 0.15);
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.6rem;
+}
+
+button.primary {
+  background-color: #168aff;
+  border: 0.1rem solid #2e66d1;
+  color: #fff;
+}
+
+button.secondary {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(0.01%, #ffffff), color-stop(140%, #f7f7f7));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 0.01%, #f7f7f7 140%);
+  border: 0.1rem solid #dadddf;
+  color: #3b3b3c;
+}
+
+button.primary:hover {
+  background-color: #2e66d1;
+}
+
+.tag {
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.tag-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tag-list .tag {
+  margin-right: 0.5rem;
+}
+
+.tag.active {
+  background: #e9f8f1;
+  color: #1c9e60;
+}
+
+.tag.completed {
+  background: #fbf1f0;
+  color: #de5e56;
+}
+
+.tag.hold {
+  background: #eaeaec;
+  color: #3b3b3c;
+}
+
+.icon-tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: #eaeaec;
+  color: #3b3b3c;
+}
+
+.icon-tag span.material-icons {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.number-tag {
+  border: 0.15rem solid #eee;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.number-tag.highlight {
+  color: #1c9e60;
+}
+
+.number-tag .number {
+  margin-left: 0.5rem;
+  padding: 0 0.5rem;
+  font-weight: 600;
+  border-left: 0.15rem solid #eee;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  max-width: 70%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+/*# sourceMappingURL=index.css.map */

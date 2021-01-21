@@ -1,0 +1,159 @@
+@import url('https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/hk-grotesk.min.css');
+
+$primaryColor: #168aff;
+$primaryColorDark: #2e66d1;
+$primaryBorderColor: #2e66d1;
+$secondaryColor: #1c9e60;
+$textColor: #3b3b3c;
+$warningColor: #de5e56;
+$warningBackground: #fbf1f0;
+$pageBackgroundColor: #fafafa;
+$fontFamily: 'HK Grotesk', sans-serif;
+$boxShadow: 0px 0.1rem 0.1rem rgba(0, 0, 0, 0.15);
+
+%flex-center-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+%flex-center-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  font-family: $fontFamily;
+  background-color: $pageBackgroundColor;
+}
+.material-icons {
+  font-family: 'Material Icons';
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+button,
+input {
+  font-family: $fontFamily;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.flex-row {
+  @extend %flex-center-row;
+}
+.flex {
+  display: flex;
+}
+
+button {
+  @extend %flex-center-row;
+  padding: 1rem 1.5rem;
+  background-color: $primaryColor;
+  border: 0.1rem solid $primaryBorderColor;
+  box-shadow: $boxShadow;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.6rem;
+}
+
+button.primary {
+  background-color: $primaryColor;
+  border: 0.1rem solid $primaryBorderColor;
+  color: #fff;
+}
+
+button.secondary {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 0.01%,
+    #f7f7f7 140%
+  );
+  border: 0.1rem solid #dadddf;
+  color: $textColor;
+}
+
+button.primary:hover {
+  background-color: $primaryColorDark;
+}
+
+.tag {
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.tag-list {
+  display: flex;
+}
+.tag-list .tag {
+  margin-right: 0.5rem;
+}
+.tag.active {
+  background: #e9f8f1;
+  color: $secondaryColor;
+}
+
+.tag.completed {
+  background: $warningBackground;
+  color: $warningColor;
+}
+.tag.hold {
+  background: #eaeaec;
+  color: $textColor;
+}
+
+.icon-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: #eaeaec;
+  color: $textColor;
+}
+.icon-tag span.material-icons {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.number-tag {
+  border: 0.15rem solid #eee;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  display: flex;
+}
+.number-tag.highlight {
+  color: $secondaryColor;
+}
+.number-tag .number {
+  margin-left: 0.5rem;
+  padding: 0 0.5rem;
+  font-weight: 600;
+  border-left: 0.15rem solid #eee;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  max-width: 70%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
