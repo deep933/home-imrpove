@@ -13,6 +13,31 @@ npm install
 npm start
 ```
 
+## File Structure
+```bash
+├───_helper/
+│   └───config.js                //API config
+├───components/
+│   ├───EffortsInfo
+│   ├───ErrorMessage
+│   ├───Header
+│   ├───Loading
+│   ├───NoResultFound
+│   ├───ProjectCard
+│   ├───ProjectList
+│   ├───Search
+│   └───Tabbar
+├───hooks/
+│   ├───useProject.js
+│   └───useProjectFilter.js
+├───pages/
+│   └───Dashboard.jsx
+├───App.css
+├───App.js
+├───index.css
+├───index.js
+```
+
 ## Technologies Used
 
 * React
