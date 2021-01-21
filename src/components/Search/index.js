@@ -4,7 +4,7 @@ import './index.css'
 const ProjectSearch = ({ handleSearch }) => {
   return (
     <div id="project-search">
-      <span class="material-icons">search</span>
+      <span className="material-icons">search</span>
       <input
         type="text"
         placeholder="Search Project ..."

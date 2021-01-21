@@ -1,40 +1,48 @@
 import { useEffect, useState } from 'react'
+import _ from 'lodash'
 
-const useProjectFilter = api => {
-  const [API] = useState(api)
-  const [error, setError] = useState()
+const useProjectFilter = () => {
   const [projects, setProjects] = useState()
-  const [isLoading, setIsLoading] = useState(true)
+  const [filteredProjects, setFilteredProjects] = useState()
+  const [query, setQuery] = useState()
+  const [activeTab, setActiveTab] = useState('all')
+
+  const handleSearch = e => {
+    setQuery(e.target.value)
+  }
+
+  const handleTabChange = tab => {
+    setActiveTab(_.toLower(tab))
+  }
 
   useEffect(() => {
-    const fetchData = async url => {
-      try {
-        const response = await fetch(url)
-        const data = await response.json()
-
-        if (response.status === 200) {
-          setProjects(data.projects)
-        } else {
-          setError(response)
-        }
-        if (response) {
-          setIsLoading(false)
-        }
-      } catch (error) {
-        setError(error)
-        setIsLoading(false)
-      }
+    const q = _.trim(_.toLower(query))
+    if (projects) {
+      setFilteredProjects(
+        projects.filter(
+          project =>
+            (_.startsWith(_.toLower(project.title), q) ||
+              _.startsWith(_.toLower(project.manager), q)) &&
+            (_.isEqual(project.status, activeTab) || activeTab === 'all')
+        )
+      )
     }
+  }, [query, projects])
 
-    if (API) {
-      //latency test
-      setTimeout(() => {
-        fetchData(API)
-      }, 2000)
+  useEffect(() => {
+    console.log(filteredProjects)
+  }, [filteredProjects])
+
+  useEffect(() => {
+    if (projects) {
+      setFilteredProjects(
+        projects.filter(
+          project => _.isEqual(project.status, activeTab) || activeTab === 'all'
+        )
+      )
     }
-  }, [API])
+  }, [activeTab])
 
-  return [projects, error, isLoading]
+  return [filteredProjects, handleSearch, setProjects, handleTabChange]
 }
-
 export default useProjectFilter

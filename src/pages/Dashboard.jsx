@@ -7,9 +7,10 @@ import NoResultFound from '../components/NoResultFound'
 import ErrorMessage from '../components/ErrorMessage'
 import useProjectFilter from '../hooks/useProjectFilter'
 import { config } from '../_helper/config'
+import useProject from '../hooks/useProject'
 
 const Dashboard = () => {
-  const [projects, error, isLoading] = useProjectFilter(config.api)
+  const [projects, error, isLoading] = useProject(config.api)
   const [
     filteredProjects,
     handleSearch,

@@ -16,6 +16,7 @@ const Tabbar = ({ tabs, activeTab, handleTabChange }) => {
           <div
             className={`tab ${active === tab ? 'active' : 'inactive'}`}
             onClick={() => handleTabClick(tab)}
+            key={tab}
           >
             {tab}
           </div>
