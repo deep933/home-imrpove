@@ -1,5 +1,4 @@
-import React from "react";
-import "./index.css";
+import './index.css'
 
 const Header = ({ handleNewProject, handleLogout }) => {
   return (
@@ -17,7 +16,7 @@ const Header = ({ handleNewProject, handleLogout }) => {
         </button>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

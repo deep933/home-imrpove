@@ -1,23 +1,23 @@
-#project-search{
-    background:#FFF;
-    border:0.15rem solid #EEE;
-    height: 2.5rem;
-    display: flex;
-    margin:0.5rem 0;
-    overflow: hidden;
-    border-radius: 0.6rem;
-    align-items:center;
+#project-search {
+  background: #fff;
+  border: 0.15rem solid #eee;
+  height: 2.5rem;
+  display: flex;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-radius: 0.6rem;
+  align-items: center;
 }
 
-#project-search input{
-    width: 100%;
-    height: 2.3rem;
-    border:none;
-        font-size: 1rem;
-    outline: none;
+#project-search input {
+  width: 100%;
+  height: 2.3rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
 }
 
-#project-search .material-icons{
-    margin:0 0.5rem;
-    color:#ccc;
+#project-search .material-icons {
+  margin: 0 0.5rem;
+  color: #ccc;
 }

@@ -6,7 +6,8 @@ const EffortsInfo = ({ efforts }) => {
         Estimated Efforts<div className="number">{efforts.estimated}</div>
       </div>
       <div className="tag number-tag highlight">
-        Actual Efforts<div className="number">{efforts.actual?efforts.actual:'-'}</div>
+        Actual Efforts
+        <div className="number">{efforts.actual ? efforts.actual : '-'}</div>
       </div>
     </div>
   )

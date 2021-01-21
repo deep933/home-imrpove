@@ -7,11 +7,11 @@ const useFilter = () => {
   const [query, setQuery] = useState()
   const [activeTab, setActiveTab] = useState('all')
 
-  const handleSearch = (e) => {
+  const handleSearch = e => {
     setQuery(e.target.value)
   }
 
-  const handleTabChange = (tab) => {
+  const handleTabChange = tab => {
     setActiveTab(_.toLower(tab))
   }
 
@@ -20,7 +20,7 @@ const useFilter = () => {
     if (projects) {
       setFilteredProjects(
         projects.filter(
-          (project) =>
+          project =>
             (_.startsWith(_.toLower(project.title), q) ||
               _.startsWith(_.toLower(project.manager), q)) &&
             (_.isEqual(project.status, activeTab) || activeTab === 'all')
@@ -37,8 +37,7 @@ const useFilter = () => {
     if (projects) {
       setFilteredProjects(
         projects.filter(
-          (project) =>
-            _.isEqual(project.status, activeTab) || activeTab === 'all'
+          project => _.isEqual(project.status, activeTab) || activeTab === 'all'
         )
       )
     }
